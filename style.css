@@ -855,12 +855,27 @@ blockquote cite {
   .rare-top { grid-template-columns: 1fr; }
   .rare-img { order: -1; }
   .about-inner { grid-template-columns: 1fr; }
-  .headshot { max-width: 220px; }
+  .about-photos { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .headshot { max-width: none; }
   section { padding: 40px 0; }
+  .services-grid { gap: 16px; }
+  .service-img { height: 160px; }
+  .service-body { padding: 18px; }
+  .service-body h3 { font-size: 1.05rem; }
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .step-number { width: 28px; height: 28px; line-height: 28px; font-size: 0.85rem; margin-bottom: 10px; }
+  .quotes { gap: 16px; }
+  blockquote { padding: 18px; }
+  blockquote p { font-size: 0.95rem; }
   .spotlight-inner { grid-template-columns: 1fr; text-align: center; }
   .spotlight-img { max-width: 240px; margin: 0 auto; }
   .spotlight-quote p { font-size: 1.4rem; }
-  .timeline { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .timeline-item { padding: 14px; }
+  .timeline-number { width: 24px; height: 24px; font-size: 0.78rem; margin-bottom: 8px; }
+  .timeline-label { font-size: 0.62rem; margin-bottom: 6px; }
+  .timeline-statement { font-size: 0.9rem; margin-bottom: 4px; }
+  .timeline-support { font-size: 0.8rem; line-height: 1.4; }
   .video-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .video-card video { border-radius: 10px; }
   .video-card h4 { font-size: 0.85rem; margin-top: 8px; margin-bottom: 0; line-height: 1.3; }
