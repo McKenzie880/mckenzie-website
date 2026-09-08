@@ -8,7 +8,8 @@
   --muted: #726a5c;
   --max-width: 1120px;
   --serif: "Fraunces", Georgia, serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --heading-serif: "Lora", Georgia, serif;
+  --sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -32,10 +33,10 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--sans);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  font-family: var(--heading-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
   margin: 0 0 18px;
 }
 
@@ -125,7 +126,7 @@ a {
 }
 
 .logo {
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
   color: var(--ink);
   font-size: 1.2rem;
@@ -171,9 +172,38 @@ section:nth-of-type(even) {
 
 /* Hero */
 .hero {
+  position: relative;
   padding: 56px 0 0;
   background: linear-gradient(150deg, #fbf9f5 0%, #f1eee2 45%, #dfe6d3 100%);
   overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/hero-bg-bottles.jpg?v=9');
+  background-size: cover;
+  background-position: center center;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(251, 249, 245, 0.98) 0%,
+    rgba(251, 249, 245, 0.98) 58%,
+    rgba(251, 249, 245, 0.6) 68%,
+    rgba(251, 249, 245, 0) 80%
+  );
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-inner {
@@ -213,7 +243,7 @@ section:nth-of-type(even) {
 }
 
 h1 em, h2 em, h3 em {
-  font-family: var(--serif);
+  font-family: var(--heading-serif);
   font-style: italic;
   font-weight: 500;
   color: var(--accent-dark);
